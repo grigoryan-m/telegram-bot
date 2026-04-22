@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  bot:
+    build: .
+    container_name: loyalty_bot
+    restart: always
+    env_file: .env
+    volumes:
+      - ./data:/app/data   # persists stores.json and analytics.jsonl
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
