@@ -8,8 +8,10 @@ class LanguageState(StatesGroup):
 class LoyaltyState(StatesGroup):
     phone = State()
     otp = State()
-    age = State()
+    name = State()        # NEW: full name
     country = State()
+    tourist = State()     # NEW: yes/no inline keyboard
+    thai_citizen = State()  # NEW: yes/no inline keyboard
 
 
 class StoreState(StatesGroup):

@@ -43,6 +43,27 @@ TEXTS = {
         ),
         "loyalty_crm_error": "⚠️ A technical error occurred. Please try again later or contact our manager.",
 
+        # New keys for WeedeN REST API flow
+        "loyalty_ask_name": "✅ Phone verified!\n\nPlease enter your full name:",
+        "loyalty_name_invalid": "❌ Please enter your real full name (at least 2 characters):",
+        "loyalty_ask_tourist": "🌍 Are you visiting as a tourist?",
+        "loyalty_ask_thai_citizen": "🇹🇭 Are you a Thai citizen?",
+        "btn_yes": "✅ Yes",
+        "btn_no": "❌ No",
+        # Fallback templates when API doesn't return a formatted message
+        "loyalty_success": (
+            "🎉 *Registration successful!*\n\n"
+            "📱 Phone: {phone}\n"
+            "🏷 Your loyalty card barcode: `{barcode}`\n\n"
+            "Show this code at any of our stores to get your discount!"
+        ),
+        "loyalty_already_exists": (
+            "✅ *Welcome back!*\n\n"
+            "📱 Phone: {phone}\n"
+            "🏷 Barcode: `{barcode}`\n\n"
+            "Your information has been updated."
+        ),
+
         # Store search
         "stores_request_geo": (
             "📍 *Find nearest store*\n\n"
@@ -134,6 +155,26 @@ TEXTS = {
         ),
         "loyalty_crm_error": "⚠️ Произошла техническая ошибка. Попробуйте позже или свяжитесь с менеджером.",
 
+        # Новые ключи для REST API
+        "loyalty_ask_name": "✅ Телефон подтверждён!\n\nВведите ваше полное имя:",
+        "loyalty_name_invalid": "❌ Введите настоящее имя (минимум 2 символа):",
+        "loyalty_ask_tourist": "🌍 Вы приехали как турист?",
+        "loyalty_ask_thai_citizen": "🇹🇭 Вы гражданин Таиланда?",
+        "btn_yes": "✅ Да",
+        "btn_no": "❌ Нет",
+        "loyalty_success": (
+            "🎉 *Регистрация прошла успешно!*\n\n"
+            "📱 Телефон: {phone}\n"
+            "🏷 Штрихкод карты: `{barcode}`\n\n"
+            "Покажите этот код в магазине для получения скидки!"
+        ),
+        "loyalty_already_exists": (
+            "✅ *С возвращением!*\n\n"
+            "📱 Телефон: {phone}\n"
+            "🏷 Штрихкод: `{barcode}`\n\n"
+            "Ваши данные обновлены."
+        ),
+
         "stores_request_geo": (
             "📍 *Поиск ближайшего магазина*\n\n"
             "Поделитесь геолокацией или выберите регион вручную:"
@@ -218,6 +259,26 @@ TEXTS = {
             "อัปเดตข้อมูลของคุณแล้ว"
         ),
         "loyalty_crm_error": "⚠️ เกิดข้อผิดพลาด กรุณาลองใหม่ภายหลังหรือติดต่อผู้จัดการ",
+
+        # คีย์ใหม่สำหรับ REST API
+        "loyalty_ask_name": "✅ ยืนยันเบอร์โทรแล้ว!\n\nกรุณาใส่ชื่อ-นามสกุล:",
+        "loyalty_name_invalid": "❌ กรุณาใส่ชื่อจริง (อย่างน้อย 2 ตัวอักษร):",
+        "loyalty_ask_tourist": "🌍 คุณมาในฐานะนักท่องเที่ยวใช่ไหม?",
+        "loyalty_ask_thai_citizen": "🇹🇭 คุณเป็นพลเมืองไทยหรือไม่?",
+        "btn_yes": "✅ ใช่",
+        "btn_no": "❌ ไม่ใช่",
+        "loyalty_success": (
+            "🎉 *ลงทะเบียนสำเร็จ!*\n\n"
+            "📱 เบอร์โทร: {phone}\n"
+            "🏷 บาร์โค้ดบัตรสะสมแต้ม: `{barcode}`\n\n"
+            "แสดงรหัสนี้ที่ร้านเพื่อรับส่วนลด!"
+        ),
+        "loyalty_already_exists": (
+            "✅ *ยินดีต้อนรับกลับมา!*\n\n"
+            "📱 เบอร์โทร: {phone}\n"
+            "🏷 บาร์โค้ด: `{barcode}`\n\n"
+            "อัปเดตข้อมูลของคุณแล้ว"
+        ),
 
         "stores_request_geo": "📍 *ค้นหาร้านใกล้เคียง*\n\nแชร์ตำแหน่งหรือเลือกภูมิภาคด้วยตนเอง:",
         "btn_send_geo": "📍 แชร์ตำแหน่ง",
