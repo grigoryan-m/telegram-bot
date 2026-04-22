@@ -37,7 +37,6 @@ async def main():
 
     await set_commands(bot)
     logger.info("Bot started")
-
     try:
         await dp.start_polling(bot, allowed_updates=dp.resolve_used_update_types())
     finally:

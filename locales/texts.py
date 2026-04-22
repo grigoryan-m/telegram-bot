@@ -14,10 +14,18 @@ TEXTS = {
         "btn_main_menu": "🏠 Main menu",
         "btn_change_lang": "🌐 Change language",
 
+        "loading": "⏳ Processing...",
+
+
+        "loyalty_hint": "Get your loyalty card in 30 seconds and receive a bonus 🎁",
+
+        # Reminders
+        "loyalty_reminder": "It takes 30 seconds to create loyalty card for bonuses in every store",
+        "after_phone_reminder": "Finish registration to activate your bonus",
+        "loyalty5m_reminder": "Without registration you can’t get rewards in stores",
         # Loyalty flow
         "loyalty_start": (
-            "🎁 *Loyalty Program Registration*\n\n"
-            "Join our loyalty program and get exclusive benefits!\n\n"
+            "🎁 *Get access to bonuses, discounts and faster service*\n\n"
             "Please enter your phone number in international format:\n"
             "Example: +66812345678"
         ),
@@ -126,10 +134,15 @@ TEXTS = {
         "btn_back": "⬅️ Назад",
         "btn_main_menu": "🏠 Главное меню",
         "btn_change_lang": "🌐 Сменить язык",
+        "loading": "⏳ Загрузка...",
 
+        "loyalty_hint": "Получите карту лояльности за 30 секунд и получите бонус 🎁",
+        # Reminders
+        "loyalty_reminder": "Создание карты лояльности для получения бонусов в любом магазине занимает 30 секунд",
+        "after_phone_reminder": "Завершите регистрацию, чтобы активировать бонус",
+        "loyalty5m_reminder": "Без регистрации вы не сможете получать бонусы в магазинах",
         "loyalty_start": (
-            "🎁 *Регистрация в программе лояльности*\n\n"
-            "Вступите в программу лояльности и получите эксклюзивные преимущества!\n\n"
+            "🎁 *Получите доступ к бонусам, скидкам и более оперативному обслуживанию*\n\n"
             "Введите номер телефона в международном формате:\n"
             "Пример: +79123456789"
         ),
@@ -231,10 +244,14 @@ TEXTS = {
         "btn_back": "⬅️ กลับ",
         "btn_main_menu": "🏠 เมนูหลัก",
         "btn_change_lang": "🌐 เปลี่ยนภาษา",
-
+        "loading": "⏳ กำลังโหลด",
+        "loyalty_hint": "รับบัตรสะสมแต้มใน 30 วินาทีและรับโบนัส 🎁",
+        # Reminders
+        "loyalty_reminder": "การสร้างบัตรสะสมแต้มเพื่อรับโบนัสที่ร้านค้าใดก็ได้ใช้เวลาเพียง 30 วินาที",
+        "after_phone_reminder": "กรอกข้อมูลลงทะเบียนให้ครบถ้วนเพื่อเปิดใช้งานโบนัส",
+        "loyalty5m_reminder": "หากไม่ลงทะเบียน คุณจะไม่สามารถรับโบนัสในร้านค้าได้",
         "loyalty_start": (
-            "🎁 *ลงทะเบียนโปรแกรมสะสมแต้ม*\n\n"
-            "เข้าร่วมโปรแกรมสะสมแต้มและรับสิทธิพิเศษ!\n\n"
+            "🎁 *รับสิทธิ์พิเศษ ส่วนลด และบริการที่รวดเร็วยิ่งขึ้น*\n\n"
             "กรุณาใส่หมายเลขโทรศัพท์ในรูปแบบสากล:\n"
             "ตัวอย่าง: +66812345678"
         ),

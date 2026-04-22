@@ -11,7 +11,9 @@ from utils.user_data import get_lang
 from utils.otp import generate_otp, verify_otp, send_otp_sms
 from utils.odoo import register_customer
 from utils.analytics import track
+import json
 
+from utils.reminders import start_reminder, cancel_reminder
 router = Router()
 logger = logging.getLogger(__name__)
 
@@ -38,6 +40,10 @@ async def loyalty_start(callback: CallbackQuery, state: FSMContext):
         parse_mode="Markdown"
     )
     await callback.answer()
+    cancel_reminder(
+        callback.message.chat.id,
+        "loyalty5m"
+    )
 
 
 # ──────────────────────────────────────────────────────────
@@ -60,10 +66,20 @@ async def process_phone(message: Message, state: FSMContext):
     otp = generate_otp(phone)
     send_otp_sms(phone, otp)
 
+    start_reminder
+
     await state.set_state(LoyaltyState.otp)
     await message.answer(
         t(lang, "loyalty_otp_sent", phone=phone),
         parse_mode="Markdown"
+    )
+    start_reminder(
+        message.bot,
+        message.chat.id,
+        lang,
+        name="after_phone_reminder",
+        delay=300,
+        text_key="after_phone_reminder"
     )
 
 
@@ -171,7 +187,7 @@ async def _finalize(message: Message, state: FSMContext, lang: str):
     tourist = data.get("tourist", False)
     thai_citizen = data.get("thai_citizen", False)
 
-    await message.answer("⏳ Processing...")
+    await message.answer(t(lang, "loading"))
 
     result = register_customer(
         name=name,
@@ -191,28 +207,30 @@ async def _finalize(message: Message, state: FSMContext, lang: str):
         )
         return
 
-    # The API returns the message text directly — display it as-is if present,
-    # otherwise fall back to our own success template.
-    api_message = result.get("message") or result.get("text") or result.get("result")
-    barcode = result.get("barcode") or result.get("card_barcode") or ""
-    is_new = result.get("is_new", True)
+    messages = result.get("content", {}).get("messages", [])
 
+    api_message = None
+    barcode = None
+
+    for msg in messages:
+        if msg.get("type") == "text":
+            api_message = msg.get("text")
+        elif msg.get("type") == "image":
+            barcode = msg.get("url")
+            
+    # Cancel loyalty reminder:
+    cancel_reminder(message.chat.id, "loyalty2h")
+    cancel_reminder(message.chat.id, "after_phone_reminder")
     if api_message:
         # Trust the Odoo-formatted message (already localised by the API)
-        await track(message.chat.id, "loyalty_completed", lang, {"is_new": is_new})
+        await track(message.chat.id, "loyalty_completed", lang)
         await message.answer(
             api_message,
             reply_markup=back_to_menu_keyboard(lang),
             parse_mode="Markdown"
         )
-    elif barcode:
-        text_key = "loyalty_success" if is_new else "loyalty_already_exists"
-        await track(message.chat.id, "loyalty_completed", lang, {"is_new": is_new})
-        await message.answer(
-            t(lang, text_key, phone=phone, barcode=barcode),
-            reply_markup=back_to_menu_keyboard(lang),
-            parse_mode="Markdown"
-        )
+    if barcode:
+        await message.answer_photo(barcode)
     else:
         # Unexpected shape — log and show generic error
         logger.error(f"Unexpected Odoo API response: {result}")
