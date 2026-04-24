@@ -88,10 +88,10 @@ async def _send_store_results(message: Message, stores: list, lang: str):
                  hours=store["hours"])
         dist = store.get("distance_km")
         if dist is not None:
-            card += f"📏 {dist} km away"
+            card += f"📏 {dist} km"
 
         await message.answer(
-            card,
+            card + t(lang, "show_card_hint"),
             reply_markup=store_maps_button(store["name"], store["lat"], store["lon"], lang),
             parse_mode="Markdown"
         )

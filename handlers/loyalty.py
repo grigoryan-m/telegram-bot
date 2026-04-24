@@ -221,6 +221,7 @@ async def _finalize(message: Message, state: FSMContext, lang: str):
     # Cancel loyalty reminder:
     cancel_reminder(message.chat.id, "loyalty2h")
     cancel_reminder(message.chat.id, "after_phone_reminder")
+    cancel_reminder(message.chat.id, "loyalty24h")
     if api_message:
         # Trust the Odoo-formatted message (already localised by the API)
         await track(message.chat.id, "loyalty_completed", lang)

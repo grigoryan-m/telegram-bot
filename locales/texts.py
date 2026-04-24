@@ -23,6 +23,7 @@ TEXTS = {
         "loyalty_reminder": "It takes 30 seconds to create loyalty card for bonuses in every store",
         "after_phone_reminder": "Finish registration to activate your bonus",
         "loyalty5m_reminder": "Without registration you can’t get rewards in stores",
+        "loyalty24h_reminder": "Your bonus -30% is still waiting 🎁. Registrate to get your loyalty card!",
         # Loyalty flow
         "loyalty_start": (
             "🎁 *Get access to bonuses, discounts and faster service*\n\n"
@@ -51,6 +52,8 @@ TEXTS = {
         ),
         "loyalty_crm_error": "⚠️ A technical error occurred. Please try again later or contact our manager.",
 
+
+        "show_card_hint": "Don't forget to show your loyalty card in store to get bonus",
         # New keys for WeedeN REST API flow
         "loyalty_ask_name": "✅ Phone verified!\n\nPlease enter your full name:",
         "loyalty_name_invalid": "❌ Please enter your real full name (at least 2 characters):",
@@ -141,6 +144,8 @@ TEXTS = {
         "loyalty_reminder": "Создание карты лояльности для получения бонусов в любом магазине занимает 30 секунд",
         "after_phone_reminder": "Завершите регистрацию, чтобы активировать бонус",
         "loyalty5m_reminder": "Без регистрации вы не сможете получать бонусы в магазинах",
+        "loyalty24h_reminder": "Ваш бонус -30% всё ещё ждёт вас 🎁. Зарегистрируйтесь, чтобы получить карту постоянного клиента!",
+
         "loyalty_start": (
             "🎁 *Получите доступ к бонусам, скидкам и более оперативному обслуживанию*\n\n"
             "Введите номер телефона в международном формате:\n"
@@ -167,7 +172,7 @@ TEXTS = {
             "Ваши данные обновлены."
         ),
         "loyalty_crm_error": "⚠️ Произошла техническая ошибка. Попробуйте позже или свяжитесь с менеджером.",
-
+        "show_card_hint": "Не забудьте предъявить в магазине свою карту лояльности, чтобы получить бонус",
         # Новые ключи для REST API
         "loyalty_ask_name": "✅ Телефон подтверждён!\n\nВведите ваше полное имя:",
         "loyalty_name_invalid": "❌ Введите настоящее имя (минимум 2 символа):",
@@ -250,6 +255,8 @@ TEXTS = {
         "loyalty_reminder": "การสร้างบัตรสะสมแต้มเพื่อรับโบนัสที่ร้านค้าใดก็ได้ใช้เวลาเพียง 30 วินาที",
         "after_phone_reminder": "กรอกข้อมูลลงทะเบียนให้ครบถ้วนเพื่อเปิดใช้งานโบนัส",
         "loyalty5m_reminder": "หากไม่ลงทะเบียน คุณจะไม่สามารถรับโบนัสในร้านค้าได้",
+        "loyalty24h_reminder": "โบนัสส่วนลด 30% ของคุณยังรออยู่ 🎁 ลงทะเบียนเพื่อรับบัตรสมาชิกเลย!",
+
         "loyalty_start": (
             "🎁 *รับสิทธิ์พิเศษ ส่วนลด และบริการที่รวดเร็วยิ่งขึ้น*\n\n"
             "กรุณาใส่หมายเลขโทรศัพท์ในรูปแบบสากล:\n"
@@ -276,7 +283,7 @@ TEXTS = {
             "อัปเดตข้อมูลของคุณแล้ว"
         ),
         "loyalty_crm_error": "⚠️ เกิดข้อผิดพลาด กรุณาลองใหม่ภายหลังหรือติดต่อผู้จัดการ",
-
+        "show_card_hint": "อย่าลืมแสดงบัตรสะสมแต้มที่ร้านค้าเพื่อรับโบนัส",
         # คีย์ใหม่สำหรับ REST API
         "loyalty_ask_name": "✅ ยืนยันเบอร์โทรแล้ว!\n\nกรุณาใส่ชื่อ-นามสกุล:",
         "loyalty_name_invalid": "❌ กรุณาใส่ชื่อจริง (อย่างน้อย 2 ตัวอักษร):",
@@ -304,7 +311,7 @@ TEXTS = {
         "stores_not_found": "😔 ไม่พบร้านค้าใกล้เคียง ลองเลือกภูมิภาคอื่น",
         "stores_result": "📍 *ร้านค้าใกล้เคียง (พบ {count} แห่ง):*",
         "btn_open_maps": "🗺 เปิดใน Google Maps",
-        "store_card": "🏪 *{name}*\n📍 {address}\n🕐 {hours}\n",
+        "store_card": "🏪 *{name}*\n📍 {address}\n🕐 {hours}\n\n",
 
         "manager_hello": "💬 *แชทกับผู้จัดการ*\n\nผู้ช่วย AI จะตอบก่อน\nพิมพ์คำถามของคุณ:",
         "manager_offline": "🕐 ผู้จัดการทำงานตั้งแต่ 10:00 ถึง 18:00\n\nคุณสามารถฝากข้อความไว้ได้:",

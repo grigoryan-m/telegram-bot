@@ -62,6 +62,14 @@ async def set_language(callback: CallbackQuery):
         callback.bot,
         callback.message.chat.id,
         lang,
+        name="loyalty5m",
+        delay=300,
+        text_key="loyalty5m_reminder"
+    )
+    start_reminder(
+        callback.bot,
+        callback.message.chat.id,
+        lang,
         name="loyalty2h",
         delay=7200,
         text_key="loyalty_reminder"
@@ -70,9 +78,9 @@ async def set_language(callback: CallbackQuery):
         callback.bot,
         callback.message.chat.id,
         lang,
-        name="loyalty5m",
-        delay=300,
-        text_key="loyalty5m_reminder"
+        name="loyalty24h",
+        delay=86400,
+        text_key="loyalty24h_reminder"
     )
     await callback.answer()
 
